@@ -34,9 +34,6 @@ select title as Longest_movies,duration from netflix_titles
 
 --6. Find content added in the last 5 years
 select title,convert(date,date_added,100) as Date_added from netflix_titles 
-	where date_added>=dateadd(year,-5,getdate())
-
-select title,convert(date,date_added,100) from netflix_titles 
 	where datediff(year,date_added,getdate())<5
 
 --7. Find all the movies/TV shows by director 'Rajiv Chilaka'!
